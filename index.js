@@ -1,4 +1,4 @@
-const  sql  = require( "@vercel/postgres");
+const { sql } = require("@vercel/postgres");
 const express = require("express");
 const dotenv = require("dotenv");
 const cors = require("cors");
@@ -11,7 +11,7 @@ app.use(express.json());
 const port = 3000;
 
 app.get("/teste",async (req, res) => {
-    const {rows } = await sql`SELECT * from CARTS where user_id=${params.user}`
+    const {rows } = await sql`SELECT * from usuarios `
 
   res.json({ message: "Hello World! meu nome é Mauro ",data: rows });
 });
